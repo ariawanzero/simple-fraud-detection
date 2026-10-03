@@ -7,6 +7,7 @@
       http://www.liquibase.org/xml/ns/dbchangelog
       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
+    <include file="db/changelog/000-create-fraud-schema.xml"/>
     <include file="db/changelog/001-create-transactions.xml"/>
     <include file="db/changelog/002-create-outbox-events.xml"/>
     <include file="db/changelog/003-create-transaction-requests.xml"/>

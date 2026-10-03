@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/frauddb
+    url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: postgres
 
@@ -10,3 +10,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: fraud

@@ -9,7 +9,7 @@
 
     <changeSet id="001" author="ariawan">
 
-        <createTable tableName="transactions">
+        <createTable schemaName="fraud" tableName="transactions">
 
             <column name="id" type="UUID">
                 <constraints primaryKey="true" nullable="false"/>
@@ -55,12 +55,14 @@
 
         <createIndex
             indexName="idx_transactions_account"
+            schemaName="fraud"
             tableName="transactions">
             <column name="account_id"/>
         </createIndex>
 
         <createIndex
             indexName="idx_transactions_card"
+            schemaName="fraud"
             tableName="transactions">
             <column name="card_id"/>
         </createIndex>

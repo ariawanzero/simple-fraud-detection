@@ -9,7 +9,7 @@
 
     <changeSet id="002" author="ariawan">
 
-        <createTable tableName="outbox_events">
+        <createTable schemaName="fraud" tableName="outbox_events">
             <column name="id" type="UUID">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -40,6 +40,7 @@
 
         <createIndex
             indexName="idx_outbox_published"
+            schemaName="fraud"
             tableName="outbox_events">
             <column name="published"/>
         </createIndex>

@@ -9,7 +9,7 @@
 
     <changeSet id="003" author="ariawan">
 
-        <createTable tableName="transaction_requests">
+        <createTable schemaName="fraud" tableName="transaction_requests">
             <column name="id" type="UUID">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
