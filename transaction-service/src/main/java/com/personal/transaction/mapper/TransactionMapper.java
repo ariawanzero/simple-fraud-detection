@@ -1,6 +1,6 @@
 package com.personal.transaction.mapper;
 
-import com.personal.transaction.dto.request.CreateTransactionRequest;
+import com.personal.transaction.dto.request.TransactionRequest;
 import com.personal.transaction.dto.response.TransactionResponse;
 import com.personal.transaction.entity.Transaction;
 
@@ -9,17 +9,16 @@ public final class TransactionMapper {
 	private TransactionMapper() {
 	}
 	
-	public static Transaction toEntity(CreateTransactionRequest request) {
-		Transaction transaction = new Transaction();
+	public static Transaction toEntity(TransactionRequest request) {
 		
-		transaction.setAccountId(request.accountId());
-		transaction.setCardId(request.cardId());
-		transaction.setAmount(request.amount());
-		transaction.setCurrency(request.currency());
-		transaction.setMerchantName(request.merchantName());
-		transaction.setCountryCode(request.countryCode());
-		
-		return transaction;
+		return Transaction.builder()
+				.accountId(request.accountId())
+				.cardId(request.cardId())
+				.amount(request.amount())
+				.currency(request.currency())
+				.merchantName(request.merchantName())
+				.countryCode(request.countryCode())
+				.build();
 	}
 	
 	public static TransactionResponse toResponse(Transaction transaction) {
