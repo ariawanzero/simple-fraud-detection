@@ -1,10 +1,12 @@
-package com.personal.transaction_service;
+package com.personal.transaction;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-class TransactionServiceApplicationTests {
+@ActiveProfiles("test")
+class TransactionApplicationTests {
 
 	@Test
 	void contextLoads() {
